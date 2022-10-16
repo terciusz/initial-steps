@@ -4,6 +4,8 @@ function colorClock(){
     var hours = date.getHours();
     var minutes = date.getMinutes();
     var seconds = date.getSeconds();
+    
+    var hexColor = '#' + hours + minutes + seconds;
   
     if (hours <= 9) {
       hours = "0" + hours;
@@ -16,7 +18,6 @@ function colorClock(){
     }
   
     var clockFace = hours + ':' + minutes + ':' + seconds;
-    var hexColor = '#' + hours + minutes + seconds;
   
     document.getElementById('clock').innerHTML = clockFace;
     document.body.style.background = hexColor;
